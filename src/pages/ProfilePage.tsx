@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronRight, Bell, Eye, EyeOff, Moon, Sun, Globe, DollarSign } from 'lucide-react'
-import BottomNavigation from '../components/BottomNavigation'
+import { BottomNavigation } from '../components/BottomNavigation'
 import { useFinanceStore } from '../store/useFinanceStore'
 import { getTelegramUser } from '../lib/telegram'
 

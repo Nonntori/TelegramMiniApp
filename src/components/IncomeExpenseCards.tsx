@@ -5,8 +5,7 @@ import { motion } from 'framer-motion';
 import { Card } from './ui/Card';
 
 export function IncomeExpenseCards() {
-  const { getBalanceSummary } = useApp();
-  const summary = getBalanceSummary('month');
+  const { totalIncome, totalExpense } = useApp();
 
   return (
     <div className="grid grid-cols-2 gap-3">
@@ -23,7 +22,7 @@ export function IncomeExpenseCards() {
             <span className="text-secondary text-sm">Доходы</span>
           </div>
           <div className="text-xl font-bold text-white tabular-nums">
-            {formatAmount(summary.totalIncome)}
+            {formatAmount(totalIncome)}
           </div>
         </Card>
       </motion.div>
@@ -41,7 +40,7 @@ export function IncomeExpenseCards() {
             <span className="text-secondary text-sm">Расходы</span>
           </div>
           <div className="text-xl font-bold text-white tabular-nums">
-            {formatAmount(summary.totalExpense)}
+            {formatAmount(totalExpense)}
           </div>
         </Card>
       </motion.div>

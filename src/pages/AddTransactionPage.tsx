@@ -1,17 +1,12 @@
 import { useApp } from '@/hooks/useApp';
-import { formatAmount, formatDate, generateId } from '@/utils/helpers';
+import { formatAmount } from '@/utils/helpers';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { X } from 'lucide-react';
 
-interface AddTransactionPageProps {
-  initialEditId?: string;
-}
-
-export function AddTransactionPage({ initialEditId }: AddTransactionPageProps) {
+export function AddTransactionPage() {
   const navigate = useNavigate();
-  const { addTransaction, categories, transactions } = useApp();
+  const { addTransaction, categories, user } = useApp();
   
   const [type, setType] = useState<'expense' | 'income'>('expense');
   const [amount, setAmount] = useState('');
@@ -30,12 +25,13 @@ export function AddTransactionPage({ initialEditId }: AddTransactionPageProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!amount || !categoryId) return;
+    if (!amount || !categoryId || !user) return;
 
     const amountInKopecks = Math.round(parseFloat(amount.replace(/\s/g, '')) * 100);
     const dateTime = new Date(`${date}T${time}`).toISOString();
 
     addTransaction({
+      userId: user.id,
       type,
       amount: type === 'expense' ? -amountInKopecks : amountInKopecks,
       categoryId,

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
-import BottomNavigation from '../components/BottomNavigation'
+import { BottomNavigation } from '../components/BottomNavigation'
 import { useFinanceStore } from '../store/useFinanceStore'
 import { formatAmount } from '../utils/helpers'
 

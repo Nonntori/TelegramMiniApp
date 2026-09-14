@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Edit2, Trash2 } from 'lucide-react'
-import BottomNavigation from '../components/BottomNavigation'
+import { BottomNavigation } from '../components/BottomNavigation'
 import { useFinanceStore } from '../store/useFinanceStore'
 import { formatAmount, formatDateTime } from '../utils/helpers'
 import { useState } from 'react'

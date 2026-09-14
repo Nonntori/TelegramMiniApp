@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Plus, Edit2, Trash2 } from 'lucide-react'
-import BottomNavigation from '../components/BottomNavigation'
+import { BottomNavigation } from '../components/BottomNavigation'
 import { useFinanceStore } from '../store/useFinanceStore'
 
 export default function CategoriesPage() {
