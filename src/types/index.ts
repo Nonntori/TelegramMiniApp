@@ -32,9 +32,9 @@ export interface User {
   avatarUrl?: string;
   currency: string;
   language: string;
-  hideBalance: boolean;
-  firstDayOfWeek: number; // 0 = Sunday, 1 = Monday
-  notificationsEnabled: boolean;
+  hideBalance?: boolean;
+  firstDayOfWeek?: number; // 0 = Sunday, 1 = Monday
+  notificationsEnabled?: boolean;
   createdAt: string;
   updatedAt: string;
 }

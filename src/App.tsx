@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import AddTransactionPage from './pages/AddTransactionPage'
+import { AddTransactionPage } from './pages/AddTransactionPage'
 import TransactionsPage from './pages/TransactionsPage'
 import AnalyticsPage from './pages/AnalyticsPage'
 import CategoriesPage from './pages/CategoriesPage'
