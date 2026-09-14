@@ -7,6 +7,7 @@ export interface Category {
   color: string;
   type: TransactionType;
   isSystem: boolean;
+  createdAt?: string;
 }
 
 export interface Transaction {
@@ -36,6 +37,15 @@ export interface User {
   notificationsEnabled: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface UserSettings {
+  currency: string;
+  language: string;
+  theme: 'light' | 'dark';
+  firstDayOfWeek: 'monday' | 'sunday';
+  notifications: boolean;
+  hideBalance: boolean;
 }
 
 export interface BalanceSummary {
